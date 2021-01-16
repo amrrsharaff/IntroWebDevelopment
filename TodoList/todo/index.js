@@ -2,7 +2,7 @@
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPN");
+  var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
@@ -15,15 +15,15 @@ var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
-    div.style.display = "none";
+    // TODO(Javscript): Set the CSS element called display to none in div
   }
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+// TODO(Javscript): Grab the list of unordered elements and store the result
+// in a variable called list.
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
-    console.log("Hi");
     ev.target.classList.toggle('checked');
   }
 }, false);
@@ -39,11 +39,14 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+
+  // TODO(Javascript): Grab an element whose ID is "myInput" using Javascript's 
+  // function document.getElementById() and set the value attribute of that element
+  // to "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
-  span.className = "close";
+  // TODO(Javascript): Set the class name of span element to "close"
   span.appendChild(txt);
   li.appendChild(span);
 
