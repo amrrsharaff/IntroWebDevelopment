@@ -37,9 +37,13 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
+  /*
+  TODO(CSS): 
+  1- Change background to grey - Done
+  2- Text color to white 
+  3- Cross out the item 
+  */
   background: #888;
-  color: #fff;
-  text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
@@ -52,8 +56,9 @@ ul li.checked::before {
   top: 10px;
   left: 16px;
   transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+  /*
+  TODO(CSS): Set height to 15 pixels and width to 7 pixels
+  */
 }
 
 /* Style the close button */
