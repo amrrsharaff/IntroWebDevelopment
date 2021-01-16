@@ -4,12 +4,13 @@ import React  from "react";
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {
-      word_count: 0,
-      char_count: 0,
-      unique_word_count: 0,
-      vocab: {}
-    }
+    /* TODO:
+     Create a state object with the following attributes
+     word_count: 0
+     char_count: 0
+     unique_word_count: 0
+     vocab: {}
+    */
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,25 +20,19 @@ class App extends React.Component {
     // ---------------------------
     // Form dictionary with counts
     // ---------------------------
+    // TODO: Create an object and call it dictionairy
     let new_dict = {}
     for(let i = 0; i < new_words_array.length; i++){
       let word = new_words_array[i];
-      if(new_dict[word]){
-        new_dict[word] += 1;
-      } else {
-        new_dict[word] = 1;
+      if(new_dict[word]){ // Word exists in dictionary
+        // TODO: Add 1 to the word count
+      } else { // Word does not exist in our dictionary
+        // TODO: Create an attribute for the word in our dictionary
+        // TODO: Set the initial value for the word in our dictionary to 1.
       }
     }
     let set = new Set(new_words_array);
-    console.log(new_words_array);
-    console.log(set);
-    console.log(new_dict);
-    this.setState({
-      char_count: new_char_count, 
-      unique_word_count: set.size,
-      word_count: new_words_array.length,
-      vocab: new_dict
-    });
+    // TODO: Set state of component to update all information
   }
 
   render (){
@@ -46,8 +41,11 @@ class App extends React.Component {
       <header className="App-header">
         <div style={{width:"100%", height: "100%"}}>
           <div style={{height: "100%", width:"70%", display: "inline-block"}}>
-              <textarea style={{height: "500px", width: "70%", resize:"none", fontSize: 14}} onChange={this.handleChange} value={this.state.text}/>
-              <p>Character count: {this.state.char_count}</p>
+              {
+              // TODO: set value attribute of textarea to the variable "text" stored in the state
+              }
+              <textarea style={{height: "500px", width: "70%", resize:"none", fontSize: 14}} onChange={this.handleChange}/>
+              <p>Character count: 0</p>
           </div>
           <div style={{
             borderLeft: "6px solid grey",
@@ -58,13 +56,17 @@ class App extends React.Component {
             display: "inline-block"
           }}></div>
           <div style={{float: "right", width: "30%"}}>
-            <button style={{fontSize: 25, borderWidth: 15}}>Refresh</button>
-            <p>unique words count: {this.state.unique_word_count}</p>
-            <p>number of words: {this.state.word_count}</p>
+            <p>unique words count: 0</p>
+            <p>number of words: 0</p>
             <ul>
-              {Object.keys(this.state.vocab).map(item => 
+              {
+                /*
+                Uncomment below in your last step
+                */
+              }
+              {/* {Object.keys(this.state.vocab).map(item => 
                 <li style={{fontSize: 16, textAlign: 'left'}}>{item}: {this.state.vocab[item]}</li>
-                )}
+                )} */}
             </ul>
           </div>
         </div>

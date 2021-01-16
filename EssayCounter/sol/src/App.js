@@ -29,9 +29,6 @@ class App extends React.Component {
       }
     }
     let set = new Set(new_words_array);
-    console.log(new_words_array);
-    console.log(set);
-    console.log(new_dict);
     this.setState({
       char_count: new_char_count, 
       unique_word_count: set.size,
@@ -58,7 +55,6 @@ class App extends React.Component {
             display: "inline-block"
           }}></div>
           <div style={{float: "right", width: "30%"}}>
-            <button style={{fontSize: 25, borderWidth: 15}}>Refresh</button>
             <p>unique words count: {this.state.unique_word_count}</p>
             <p>number of words: {this.state.word_count}</p>
             <ul>
